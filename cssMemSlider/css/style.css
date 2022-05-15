@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #303c44;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 50rem;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper input[name="point"] {
+    display: none;
+  }
+  
+ 
+  
+  .controls label {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+    margin: 0 3px;
+    box-shadow: 0 0 2px 0 rgba(84, 56, 56, 0.8);
+    border-radius: 50%;
+    border: 5px solid #bdc4c9;
+    background-color: #ffe356;
+  }
+  
+  #slide1:checked~.controls label[for="slide1"] {
+    background-color: white;
+  }
+  
+  #slide2:checked~.controls label[for="slide2"] {
+    background-color: white;
+  }
+  
+  #slide3:checked~.controls label[for="slide3"] {
+    background-color: white;
+  }
+
+  #slide4:checked~.controls label[for="slide4"] {
+    background-color: white;
+  }
+  
+  .slider {
+    display: flex;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 50rem;
+  }
+  
+  .slides {
+    width: 100%;
+    transition: all 1s ease-in-out;
+  }
+  
+  .slides img {
+    width: 50rem;
+    height: 35rem;
+  }
+  
+#slide1:checked~.slider .slides{
+    transform: translate(0);
+}
+
+#slide2:checked~.slider .slides{
+    transform: translate(-100%);
+}
+
+#slide3:checked~.slider .slides{
+    transform: translate(-200%);
+}
+
+#slide4:checked~.slider .slides{
+    transform: translate(-300%);
+}
+
+.slide_text {
+    height: 3rem;
+    overflow: hidden;
+}
+
+.text {
+    padding: 0.8rem 0;
+    font-size: 1.3em;
+    transition: all 0.5s ease-in-out;
+    color: #c1bfbf;
+}
+
+#slide1:checked~.slide_text .text-active {
+margin-top: 0;
+}
+
+#slide2:checked~.slide_text .text-active {
+    margin-top: -3.1rem;
+}
+
+#slide3:checked~.slide_text .text-active {
+    margin-top: -6.2rem;
+}
+
+#slide4:checked~.slide_text .text-active {
+    margin-top: -9.3rem;
+}
