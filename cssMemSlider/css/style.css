@@ -9,14 +9,15 @@
 
 body {
 	background-color: #303c44;
+    height: 100vh;
 }
 
 .wrapper{
-    width: 100%;
-    max-width: 50rem;
+    width: 90%;
+    max-width: 45rem;
     padding: 0;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 4rem;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
@@ -27,6 +28,22 @@ body {
 .wrapper input[name="point"] {
     display: none;
   }
+
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+}
+
+img {
+    width: 100%;
+    transition: all 0.7s ease-in-out;
+    object-fit: cover;
+}
 
 
   .controls {
@@ -66,36 +83,22 @@ body {
     background-color: rgb(255, 255, 255);
 }
   
-  .slider {
-    display: flex;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 50rem;
-  }
+
   
-  .slides {
-    transition: all 0.7s ease-in-out;
-  }
-  
-  .slides img {
-    width: 50rem;
-    height: 35rem;
-  }
-  
-#slide1:checked~.slider .slides{
-    transform: translate(0);
+#slide1:checked~.slider-container .slide-img{
+    transform: translateX(0);
 }
 
-#slide2:checked~.slider .slides{
-    transform: translate(-100%);
+#slide2:checked~.slider-container .slide-img{
+    transform: translateX(-100%);
 }
 
-#slide3:checked~.slider .slides{
-    transform: translate(-200%);
+#slide3:checked~.slider-container .slide-img{
+    transform: translateX(-200%);
 }
 
-#slide4:checked~.slider .slides{
-    transform: translate(-300%);
+#slide4:checked~.slider-container .slide-img{
+    transform: translateX(-300%);
 }
 
 .slide_text {
