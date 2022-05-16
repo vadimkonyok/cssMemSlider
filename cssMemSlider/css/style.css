@@ -27,36 +27,44 @@ body {
 .wrapper input[name="point"] {
     display: none;
   }
-  
- 
-  
-  .controls label {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    cursor: pointer;
-    margin: 0 3px;
-    box-shadow: 0 0 2px 0 rgba(84, 56, 56, 0.8);
-    border-radius: 50%;
-    border: 5px solid #bdc4c9;
-    background-color: #ffe356;
-  }
-  
-  #slide1:checked~.controls label[for="slide1"] {
-    background-color: white;
-  }
-  
-  #slide2:checked~.controls label[for="slide2"] {
-    background-color: white;
-  }
-  
-  #slide3:checked~.controls label[for="slide3"] {
-    background-color: white;
-  }
 
-  #slide4:checked~.controls label[for="slide4"] {
-    background-color: white;
-  }
+
+  .controls {
+      display: flex;
+    
+}
+
+.slider-control{
+    padding: 0.8rem;
+    cursor: pointer;
+}
+
+.slider-point {
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+    border: 2px solid #d9efd3;
+    
+}
+  
+  
+.slider-control:hover .slider-point{
+    transition: all 0.3s ease-in-out;
+    background-color: #bbb;
+}
+
+.slider-control:active .slider-point{
+    background-color: rgb(244, 244, 244);
+    border: 2px solid rgb(63, 225, 27);
+}
+  
+#slide1:checked~.controls label[for="slide1"] .slider-point,
+#slide2:checked~.controls label[for="slide2"] .slider-point,
+#slide3:checked~.controls label[for="slide3"] .slider-point,
+#slide4:checked~.controls label[for="slide4"] .slider-point {
+    background-color: rgb(255, 255, 255);
+}
   
   .slider {
     display: flex;
@@ -66,8 +74,7 @@ body {
   }
   
   .slides {
-    width: 100%;
-    transition: all 1s ease-in-out;
+    transition: all 0.7s ease-in-out;
   }
   
   .slides img {
@@ -100,7 +107,7 @@ body {
     padding: 0.8rem 0;
     font-size: 1.3em;
     transition: all 0.5s ease-in-out;
-    color: #c1bfbf;
+    color: #f4fffa;
 }
 
 #slide1:checked~.slide_text .text-active {
