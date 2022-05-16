@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>cssMemSlider</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <input
+        type="radio"
+        name="point"
+        id="slide1"
+        class="slider-radio"
+        checked
+      />
+      <input type="radio" name="point" id="slide2" class="slider-radio" />
+      <input type="radio" name="point" id="slide3" class="slider-radio" />
+      <input type="radio" name="point" id="slide4" class="slider-radio" />
+
+      <div class="slider-container">
+        <div class="slider">
+          <img src="image/1.jpg" alt="" class="slide-img" />
+          <img src="image/2.jpg" alt="" class="slide-img" />
+          <img src="image/3.jpg" alt="" class="slide-img" />
+          <img src="image/4.jpg" alt="" class="slide-img" />
+        </div>
+      </div>
+
+      <div class="slide_text">
+        <p class="text text-active">Я в надежде найти нужный код</p>
+        <p class="text">Я не знаю как это сделать</p>
+        <p class="text">Я котик, у меня же лапки</p>
+        <p class="text">Ничего не работает!!!</p>
+      </div>
+
+      <div class="controls">
+        <label for="slide1" class="slider-control"
+          ><div class="slider-point"></div
+        ></label>
+        <label for="slide2" class="slider-control"
+          ><div class="slider-point"></div
+        ></label>
+        <label for="slide3" class="slider-control"
+          ><div class="slider-point"></div
+        ></label>
+        <label for="slide4" class="slider-control"
+          ><div class="slider-point"></div
+        ></label>
+      </div>
+    </div>
+  </body>
+</html>
